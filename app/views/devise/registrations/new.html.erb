@@ -1,0 +1,105 @@
+<div class="container-fluid">
+  <div class="row vh-100 flex justify-content-between">
+    <div class="col-md-4 d-sm-none d-md-block">
+      <div class="vh-100 mx-auto p-5 text-white"
+           style="background-image: url('https://images.pexels.com/photos/6945247/pexels-photo-6945247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+                  background-position: center;
+                  background-size: cover;">
+      <div class="row d-flex align-item-center p-5">
+        <a href="/" class="text-decoration-none text-bold text-white fs-4">Guavaaa</a>
+        <p class="fw-bold fs-5">Guava: So Sweet, It'll Make Corn Blush with Envy!</p>
+        <small class="fw-bold fs-5"> — by Pan baba</small>
+      </div>
+
+      </div>
+    </div>
+    <div class="col-md-8 h-100">
+      <div class="flex mx-auto">
+
+        <div class="section">
+          <div class="container">
+            <div class="row full-height justify-content-center">
+              <div class="col-12 text-center align-self-center py-5">
+                <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                  <h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
+                        <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+                        <label for="reg-log"></label>
+                  <div class="card-3d-wrap mx-auto">
+                    <div class="card-3d-wrapper">
+                      <div class="card-front">
+                        <div class="center-wrap">
+                          <div class="section text-center">
+                            <h4 class="mb-4 pb-3">Log In</h4>
+                            <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),
+                              data: {turbo: false}) do |f| %>
+                            <div class="form-group">
+                            <%= f.input :email,
+                                  required: true,
+                                  autofocus: true,
+                                  class: "form-style",
+                                  input_html: { autocomplete: "email" }%>
+                                <i class="input-icon uil uil-lock-alt"></i>
+                              <i class="input-icon uil uil-at"></i>
+                            </div>
+                            <div class="form-group mt-2">
+                              <%= f.input :password,
+                                  required: true,
+                                  autofocus: true,
+                                  class: "form-style",
+                                  input_html: { autocomplete: "password" }%>
+                              <i class="input-icon uil uil-lock-alt"></i>
+                            </div>
+                            <a href="#" class="btn mt-4"><%= f.button :submit, "Log in" %></a>
+                              <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p>
+                              </div>
+                            </div>
+                            <% end %>
+                          </div>
+                      <div class="card-back">
+                        <div class="center-wrap">
+                          <div class="section text-center">
+                            <h4 class="">Sign Up</h4>
+                            <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                              <%= f.error_notification %>
+                              <div class="form-group">
+                                <%= f.input :username,
+                                    required: true,
+                                    autofocus: true,
+                                    class: "form-style",
+                                    input_html: { autocomplete: "username" }%>
+                                <i class="input-icon uil uil-user"></i>
+                              </div>
+                              <div class="form-group mt-2">
+                                <%= f.input :email,
+                                  required: true,
+                                  autofocus: true,
+                                  class: "form-style",
+                                  input_html: { autocomplete: "email" }%>
+                                <i class="input-icon uil uil-lock-alt"></i>
+                              </div>
+                              <div class="form-group mt-2">
+                                <%= f.input :password,
+                                  required: true,
+                                  autofocus: true,
+                                  class: "form-style",
+                                  input_html: { autocomplete: "password" }%>
+                                <i class="input-icon uil uil-lock-alt"></i>
+                              </div>
+                              <a href="#" class="btn mt-4"><%= f.button :submit, "Sign up" %></a>
+                                </div>
+                              </div>
+                            <% end %>
+                            <%# <%= render "devise/shared/links" %>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
