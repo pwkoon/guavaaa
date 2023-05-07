@@ -4,3 +4,26 @@
   right: 16px;
   z-index: 1000;
 }
+
+.back-top {
+  position: fixed;
+  bottom: 32px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .4;
+  font-size: 50px;
+}
+
+.back-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.img-faq {
+  height: 80%;
+  width: 40%;
+}
