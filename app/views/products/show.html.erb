@@ -1,2 +1,28 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<div class="container-fluid">
+  <div class="row bg-dark py-2">
+    <a href="/#product" class="text-end fs-4" style="color: #AA5656;"><i class="fa-regular fa-circle-xmark"></i></a>
+  </div>
+</div>
+<div class="container vh-100 py-5">
+  <section class="shadow p-3" style="background-color: #AA5656; width: 100%; border-radius:15px;">
+    <div class="row d-flex align-items-center justify-content-around g-2 py-4">
+      <div class="col-lg-5">
+        <%= cl_image_tag @product.photo.key, height: 700, width: 300, crop: :fill %>
+      </div>
+      <div class="col-lg-6 text-white text-center">
+        <h1 class="display-4"><%= @product.name %></h1>
+        <hr>
+        <div class="py-5">
+          <h3 class="text-white fw-bold">They are... </h3>
+          <p class="text-white fs-5">
+          <%= @product.description %>
+          </p>
+        </div>
+        <div class="py-5">
+          <p class="text-white bg-dark w-50 p-3 mx-auto">Price: <%= humanized_money_with_symbol(@product.price) %> /kg</p>
+        </div>
+        <a href="/" class="card__button opacity-100">Add to cart</a>
+      </div>
+    </div>
+  </section>
+</div>

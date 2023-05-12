@@ -1,0 +1,380 @@
+*{
+  margin:0;
+  padding: 0;
+}
+
+.login-navbar {
+  margin-left: 90%;
+}
+// body{
+//   font-family: :;
+// }
+.wrapper {
+  width: 1170px;
+  margin: auto;
+}
+
+.header {
+  background: url('https://images.unsplash.com/photo-1562702118-df67f3df07b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80');
+  height: 100vh;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.nav-area {
+  text-align: right;
+  list-style: none;
+  margin-top: 30px;
+}
+
+.nav-area li {
+  display: inline-block;
+}
+
+.nav-area li a {
+  color: #FEFF86;
+  text-decoration: none;
+  padding: 5px 20px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 30px;
+}
+
+.nav-area li a:hover {
+  background: #FEFF86;
+  color: #000000;
+}
+
+.logo-img {
+  width: 20%;
+  padding: 15px 0;
+}
+
+.welcome-text {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.welcome-text h1 {
+  text-align: center;
+  color: #FFD95A;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.welcome-text p {
+  margin-top: 20px;
+}
+
+.welcome-text a {
+  border: 1px solid #FFD95A;
+  padding: 10px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 16px;
+  margin-right: 2px;
+  display: inline-block;
+  color: #FFD95A;
+  font-weight: 900;
+}
+
+.welcome-text a:hover {
+  background: #FFD95A;
+  color: #000000;
+}
+
+// MEDIA RESPONSIVE
+/* Extra extra small devices (phones,  and down) */
+@media only screen and (max-width:320px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .logo-img {
+    width: 10%;
+    text-align: center;
+    margin-left: 45%;
+  }
+
+  .nav-area {
+    margin-top: 0;
+    overflow: hidden;
+  }
+
+  .nav-area li a {
+    padding: 5px;
+    font-size: 11px;
+  }
+
+  .nav-area {
+    text-align: center;
+  }
+
+  .welcome-text h1 {
+    font-size: 30px;
+    top: 30%;
+  }
+
+}
+// /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width:600px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .logo-img {
+    width: 10%;
+    text-align: center;
+    margin-left: 45%;
+  }
+
+  .nav-area {
+    margin-top: 0;
+  }
+
+  .nav-area li a {
+    padding: 5px;
+    font-size: 11px;
+  }
+
+  .nav-area {
+    text-align: center;
+  }
+
+  .welcome-text h1 {
+    font-size: 20px;
+    top: 30%;
+  }
+}
+
+// // /* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .logo-img {
+    width: 10%;
+    text-align: center;
+    margin-left: 45%;
+  }
+
+  .nav-area {
+    margin-top: 0;
+  }
+
+  .nav-area li a {
+    padding: 5px;
+    font-size: 11px;
+  }
+
+  .nav-area {
+    text-align: center;
+  }
+
+  .welcome-text h1 {
+    font-size: 20px;
+    top: 30%;
+  }
+}
+
+// // /----FIFTH----/*/* Medium devices (landscape tablets, < 768px) */
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .logo-img {
+    width: 10%;
+    text-align: center;
+    margin-left: 45%;
+  }
+
+  .nav-area {
+    margin-top: 0;
+  }
+
+  .nav-area li a {
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  .nav-area {
+    text-align: center;
+  }
+
+  .welcome-text h1 {
+    font-size: 26px;
+    top: 50%;
+    margin-top: 27%;
+  }
+
+}
+
+// // /----FORTH----/* Medium devices (landscape tablets, < 768px) */
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .logo-img {
+    width: 10%;
+    text-align: center;
+    margin-left: 47%;
+  }
+
+  .nav-area {
+    margin-top: 0;
+  }
+
+  .nav-area li a {
+    padding: 5px;
+    font-size: 18px;
+  }
+
+  .nav-area {
+    text-align: center;
+  }
+
+  .welcome-text {
+    margin-left: 15px;
+  }
+
+  .welcome-text h1 {
+    font-size: 30px;
+    top: 50%;
+    margin-top: 27%;
+  }
+
+}
+
+// //----THIRD----/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .logo-img {
+    width: 10%;
+    text-align: center;
+    margin-left: 47%;
+  }
+
+  .nav-area {
+    margin-top: 0;
+  }
+
+  .nav-area li a {
+    padding: 5px;
+    font-size: 18px;
+  }
+
+  .nav-area {
+    text-align: center;
+  }
+
+  .welcome-text {
+    margin-left: 15px;
+  }
+
+  .welcome-text h1 {
+    font-size: 30px;
+    top: 100%;
+    margin-top: 27%;
+  }
+}
+
+// // ----SECOND---- /* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .logo-img {
+    width: 10%;
+    text-align: center;
+    margin-left: 47%;
+  }
+
+  .nav-area {
+    margin-top: 0;
+  }
+
+  .nav-area li a {
+    padding: 5px;
+    font-size: 18px;
+  }
+
+  .nav-area {
+    text-align: center;
+  }
+
+  .welcome-text {
+    margin-left: 15px;
+  }
+
+  .welcome-text h1 {
+    font-size: 30px;
+    top: 100%;
+    margin-top: 27%;
+  }
+}
+
+// // ----FIRST---- /* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .logo-img {
+    width: 17%;
+    text-align: center;
+    margin-left: 48%;
+  }
+
+  .nav-area {
+    margin-top: 0;
+  }
+
+  .nav-area li a {
+    padding: 5px;
+    font-size: 18px;
+  }
+
+  .nav-area {
+    text-align: center;
+  }
+
+  .welcome-text h1 {
+    font-size: 30px;
+    top: 50%;
+    margin-top: 25%;
+  }
+
+
+}
+
+// THIS IS RESPONSIVE REFERENCE YOU CAN DO IT!
+/* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {...}
+
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {...}
+
+// /* Medium devices (landscape tablets, 768px and up) */
+// @media only screen and (min-width: 768px) {...}
+
+// /* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {...}
+
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1200px) {...}

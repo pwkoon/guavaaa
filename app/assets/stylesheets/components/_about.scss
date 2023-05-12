@@ -1,0 +1,29 @@
+.about {
+  background: #fff;
+  height: 100%;
+}
+
+.about-img {
+  width: 100%;
+  height: 50vh;
+  border-radius: 5px;
+}
+
+.shadow-effect {
+  transition: all 0.5s;
+}
+
+.shadow-effect:hover {
+  box-shadow: 10px 10px 0 0 #FFD95A;
+}
+
+.about-content {
+  background: #FBFFB1;
+  position: relative;
+}
+
+.avatar-large {
+  position: absolute;
+  top: -24px;
+  right: -5px;
+}
