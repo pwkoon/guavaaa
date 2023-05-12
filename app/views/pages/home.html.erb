@@ -1,117 +1,89 @@
-<%= render "shared/carousell" %>
+<%# LOGIN NAVBAR %>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #617A55;">
+  <div class="container-md">
+    <% if user_signed_in? %>
+      <div class="login-navbar">
+        <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-link text-white" %>
+      </div>
+    <% else %>
+      <div class="login-navbar">
+        <%= link_to "Login", new_user_session_path, class: "nav-link text-white" %>
+      </div>
+    <% end %>
+  </div>
+</nav>
+<%# LOGIN NAVBAR %>
 
-<%# BACK TO TOP %>
-<div class="back-top"
-     data-controller="backtop"
-     data-action="scroll@window->backtop#updateButton">
-  <a href="#"><i class="fa-solid fa-circle-up"></i></a>
-</div>
-<%# BACK TO TOP %>
-
-<%# ABOUT %>
-<div class="container py-5 full-height" id="about">
-  <div class="row vh-100" >
-    <div class="col-lg-4 d-none d-lg-block vh-100" style="background-color: #F1F5F2">
-      <div class="service p-6 bg-base shadow-effect" data-aos="fade-up"
-           style="background-image: url('https://images.unsplash.com/photo-1564322955384-c41858b46881?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80');
-                  background-size: cover;
-                  background-position: center;">
-          <%# <a href="#" class="link-custom text-end">Read More</a> %>
+<%# HEADER/BANNER/NAVBAR %>
+<div class="header">
+  <div class="wrapper">
+    <div class="row flex justify-content-between align-items-center py-5">
+      <div class="col-lg-6 col-md-12 col-sm-12">
+        <%= image_tag(asset_path('guavaa.png'), class: "logo-img") %>
+     </div>
+     <div class="col-lg-6 col-md-12 col-sm-12" >
+        <ul class="nav-area">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Review</a></li>
+        </ul>
       </div>
     </div>
-    <div class="col-lg-8 vh-100" style="background-color: #ADC2A9;">
-      <section class="about">
-        <p class="fw-bold display-7"data-aos="fade-up">About</p>
-        <br>
-        <h3 class="display-4 fw-bold" data-aos="fade-up">Founder of<span class="text-brand"> <mark>Guavaa</mark></span> From Kampong Sekinchan</h3>
-        <p class="lead mt-2 mb-4" data-aos="fade-up" data-aos-delay="300">Transitioning from being a construction worker to a fruit and vegetable farmer is tougher than changing careers to coding. After all, it requires a combination of physical and mental prowess. However, Mr. Pan, driven by an undying spirit, made the courageous decision to convert his rice fields into a sprawling fruit and vegetable garden. He began by cultivating sour kumquats, and then delved into the realms of guava and corn cultivation. It's not mere showmanship; numerous reviews have attested to Mr. Pan's exceptional guavas, and his corn harvests never fail to cause a frenzy. If you want to learn more, read on!</p>
-        <div data-aos="fade-up" data-aos-delay="600">
-              <a href="#" class="btn btn-brand me-3">See all reviews</a>
-              <a href="#" class="link-custom">Email to guavaaa@gmail.com</a>
+  </div>
+
+  <div class="welcome-text">
+    <h1>Sekinchan's local</h1>
+    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+    <a href="/">Contact US</a>
+  </div>
+</div>
+<%# HEADER/BANNER/NAVBAR %>
+
+<%# About %>
+<div class="about">
+  <div class="container about-section py-5">
+    <div class="row d-flex g-5 justify-content-between align-items-center">
+      <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="about-img shadow-effect" data-aos="fade-up" style="background-image: url('https://images.pexels.com/photos/1459331/pexels-photo-1459331.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
         </div>
-      </section>
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 bg-white" data-aos="fade-up">
+        <div class="about-content p-3">
+          <h5>About <span class="fw-bold display-6">Guavaaa</span></h5>
+          <p>Transitioning from being a construction worker to a fruit and vegetable farmer is tougher
+          than changing careers to coding. After all, it requires a combination of physical and mental
+          prowess. <strong>However, Mr. Pan, driven by an undying spirit, made the courageous decision to
+          convert his rice fields into a sprawling fruit and vegetable garden. He began by cultivating
+          sour kumquats, and then delved into the realms of guava and corn cultivation.</strong>
+          It's not mere showmanship; numerous reviews have attested to Mr. Pan's exceptional guavas,
+          and his corn harvests never fail to cause a frenzy. If you want to learn more, read on!</p>
+        </div>
+        <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+      </div>
     </div>
   </div>
 </div>
-<%# ABOUT %>
+<%# About %>
 
 <%# PRODUCTS %>
-<div class="container-fluid" id="product">
-  <div class="row vw-100 vh-50" style="background-color: #61876E;">
-  <p class="fw-bold display-6 text-center py-3" data-aos="fade-up"> <%= link_to "Products", products_path %></p>
-    <div class="col-lg-4 my-5 py-5" data-aos="fade-up">
-      <article class="card mx-auto flex-center">
-        <img
-          class="card__background"
-          src="https://images.unsplash.com/photo-1633349202776-39545fa23de7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80"
-          alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
-          width="1920"
-          height="2193"
-        />
-        <div class="card__content | flow">
-          <div class="card__content--container | flow">
-            <h2 class="card__title"><%= @products.first.name %></h2>
-            <p class="card__description">
-              <%= @products.first.description.split(". ").first %>
-            </p>
+<div class="product">
+  <div class="container-fluid product-section">
+    <div class="row d-flex align-items-center">
+      <div class="card mx-auto col-md-3 col-10 mt-5 pt-4">
+          <div class="d-flex sale ">
+              <div class="btn">SALE</div>
           </div>
-          <button class="card__button">Read more</button>
-        </div>
-      </article>
-    </div>
-
-    <div class="col-lg-4 my-5 py-5">
-      <article class="card mx-auto flex-center" data-aos="fade-up">
-        <img
-          class="card__background"
-          src="https://images.unsplash.com/photo-1629367308496-a2496ba22f88?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
-          alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
-          width="1920"
-          height="2193"
-        />
-        <div class="card__content | flow">
-          <div class="card__content--container | flow">
-            <h2 class="card__title"><%= @products.second.name %></h2>
-            <p class="card__description">
-              <%= @products.second.description.split(". ").first %>
-            </p>
+          <img class='mx-auto img-thumbnail'
+              src="https://i.imgur.com/WaZxrEe.jpg"
+              width="auto" height="auto"/>
+          <div class="card-body text-center mx-auto">
+              <h5 class="card-title">Sofa Chair</h5>
+              <p class="card-text">$1,399</p>
           </div>
-          <button class="card__button">Read more</button>
-        </div>
-      </article>
+      </div>
     </div>
-
-    <div class="col-lg-4 my-5 py-5">
-      <article class="card mx-auto flex-center" data-aos="fade-up">
-        <img
-          class="card__background"
-          src="https://images.unsplash.com/photo-1571646302210-db7990b30751?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-          alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
-          width="1920"
-          height="2193"
-        />
-        <div class="card__content | flow">
-          <div class="card__content--container | flow">
-            <h2 class="card__title"><%= @products.last.name %></h2>
-            <p class="card__description">
-              <%= @products.last.description.split(". ").first %>
-            </p>
-          </div>
-          <button class="card__button">Read more</button>
-        </div>
-      </article>
-    </div>
-
-
-
   </div>
 </div>
 <%# PRODUCTS %>
-
-<%# REVIEWS %>
-<div class="container-fluid full-height" id="about">
-  <div class="row g-4 vh-100 flex justify-content-around align-items-center" >
-    <%= render "shared/review" %>
-  </div>
-</div>
-<%# REVIEWS %>
