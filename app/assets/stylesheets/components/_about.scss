@@ -4,7 +4,7 @@
 }
 
 .about-img {
-  width: 100%;
+  width: 120%;
   height: 50vh;
   border-radius: 5px;
 }
@@ -26,4 +26,29 @@
   position: absolute;
   top: -24px;
   right: -5px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .about-img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-img {
+    width: 120%;
+  }
 }
