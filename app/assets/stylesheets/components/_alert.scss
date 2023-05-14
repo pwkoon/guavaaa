@@ -8,13 +8,14 @@
 .back-top {
   position: fixed;
   bottom: 32px;
-  right: 50px;
+  right: 20px;
   width: 70px;
   height: 70px;
   opacity: 0;
   pointer-events: none;
   transition: all .4;
   font-size: 50px;
+  z-index: 100;
 }
 
 .back-top.active {
@@ -26,4 +27,17 @@
 .img-faq {
   height: 80%;
   width: 40%;
+}
+
+.product-show {
+  width: 100%;
+  position: relative;
+}
+
+.product-show1 {
+  border: 1px solid white;
+  padding: 10px;
+  position: absolute;
+  top: 224px;
+  right: 750px;
 }
