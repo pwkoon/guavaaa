@@ -1,0 +1,9 @@
+<div class="p-1 m-4 text-center">
+  <%= simple_form_for @contact do |f| %>
+    <%= f.input :name %>
+    <%= f.input :email %>
+    <%= f.input :phone_number %>
+    <%= f.input :question %>
+    <%= f.button :submit , "Submit"%>
+  <% end %>
+</div>

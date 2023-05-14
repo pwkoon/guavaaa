@@ -12,5 +12,6 @@ class PagesController < ApplicationController
         marker_html: render_to_string(partial: "marker")
       }
     end
+    @contact = Contact.new
   end
 end
