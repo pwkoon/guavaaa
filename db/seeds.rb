@@ -30,7 +30,7 @@ image3 = URI.open("https://images.unsplash.com/photo-1571646302210-db7990b30751?
 
 product1= Product.new(
   name: "Guava A",
-  description: "Guava trees are native to tropical America and are grown in tropical and subtropical areas worldwide. Guava fruits are processed into jams, jellies, and preserves and are common pastry fillings.",
+  description: "Guava trees are native to tropical America but we different. They are grown in tropical and subtropical areas worldwide. Guava fruits are processed into jams, jellies, and preserves and are common pastry fillings.",
   price_cents: 450
 )
 

@@ -10,15 +10,12 @@
   --font-text: "Lato", sans-serif;
 }
 
-/* RESET */
-
 /* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
 /* Remove default margin */
 h2,
 p {
@@ -26,8 +23,6 @@ p {
 }
 
 /* GLOBAL STYLES */
-
-
 h2 {
   font-size: 2.25rem;
   font-family: var(--font-title);
@@ -191,3 +186,60 @@ p {
     transition-delay: 500ms;
   }
 }
+
+// MEDIA QUERIES
+// @media screen and (max-width: 600px) {
+//   .card {
+//     max-width: 57.875rem;
+//   }
+
+//   .card__content {
+//     height: 55%;
+//     width: 100%;
+//   }
+
+//   .card-button {
+//     margin-bottom: 10%;
+//   }
+// }
+
+// @media screen and (min-width: 768px) {
+//   .card {
+//     max-width: 57.875rem;
+//   }
+
+//   .card__content {
+//     height: 55%;
+//     width: 100%;
+//   }
+
+//   .card-button {
+//     margin-bottom: 10%;
+//   }
+// }
+
+// @media screen and (min-width: 768px) {
+//   .card {
+//     max-width: 57.875rem;
+//   }
+
+//   .card__content {
+//     height: 55%;
+//     width: 100%;
+//   }
+
+//   .card-button {
+//     margin-bottom: 10%;
+//   }
+// }
+
+// @media screen and (min-width: 1200px) {
+//   .card {
+//     max-width: 21.875rem;
+//   }
+
+//   .card__content {
+//     height: 55%;
+//     width: 100%;
+//   }
+// }

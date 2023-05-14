@@ -52,7 +52,7 @@
       <div class="col-lg-6 col-md-12 col-sm-12 bg-white" data-aos="fade-up">
         <div class="about-content p-3">
           <h5>About <span class="fw-bold display-6">Guavaaa</span></h5>
-          <p>Transitioning from being a construction worker to a fruit and vegetable farmer is tougher
+          <p class="text-dark">Transitioning from being a construction worker to a fruit and vegetable farmer is tougher
           than changing careers to coding. After all, it requires a combination of physical and mental
           prowess. <strong>However, Mr. Pan, driven by an undying spirit, made the courageous decision to
           convert his rice fields into a sprawling fruit and vegetable garden. He began by cultivating
@@ -68,22 +68,98 @@
 <%# About %>
 
 <%# PRODUCTS %>
-<div class="product">
-  <div class="container-fluid product-section">
-    <div class="row d-flex align-items-center">
-      <div class="card mx-auto col-md-3 col-10 mt-5 pt-4">
-          <div class="d-flex sale ">
-              <div class="btn">SALE</div>
+<%= render "shared/modal" %>
+<div class="container-fluid" id="product">
+  <div class="row vw-100 vh-50" style="background-color: #FFF56D;">
+  <p class="fw-bold display-5 text-center py-3" data-aos="fade-up">PRODUCTS</p>
+    <div class="col-lg-4 col-md-12 py-5" data-aos="fade-up">
+      <article class="card mx-auto flex-center">
+        <img
+          class="card__background"
+          src="https://images.unsplash.com/photo-1633349202776-39545fa23de7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80"
+          alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+          width="1920"
+          height="2193"
+        />
+        <div class="card__content | flow">
+          <div class="card__content--container | flow">
+            <h2 class="card__title"><%= @products.first.name %></h2>
+            <p class="card__description">
+              <%= @products.first.description.split(". ").first %>
+            </p>
           </div>
-          <img class='mx-auto img-thumbnail'
-              src="https://i.imgur.com/WaZxrEe.jpg"
-              width="auto" height="auto"/>
-          <div class="card-body text-center mx-auto">
-              <h5 class="card-title">Sofa Chair</h5>
-              <p class="card-text">$1,399</p>
+          <a href=<%= "/products/#{@products.first.id}" %> class="card__button fw-bold text-dark text-decoration-none">Read more</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="col-lg-4 col-md-12 py-5">
+      <article class="card mx-auto flex-center" data-aos="fade-up">
+        <img
+          class="card__background"
+          src="https://images.unsplash.com/photo-1629367308496-a2496ba22f88?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
+          alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+          width="1920"
+          height="2193"
+        />
+        <div class="card__content | flow">
+          <div class="card__content--container | flow">
+            <h2 class="card__title"><%= @products.second.name %></h2>
+            <p class="card__description">
+              <%= @products.second.description.split(". ").first %>
+            </p>
           </div>
-      </div>
+           <a href=<%= "/products/#{@products.second.id}" %> class="card__button fw-bold text-dark text-decoration-none">Read more</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="col-lg-4 col-md-12 py-5">
+      <article class="card mx-auto flex-center" data-aos="fade-up">
+        <img
+          class="card__background"
+          src="https://images.unsplash.com/photo-1571646302210-db7990b30751?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+          alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+          width="1920"
+          height="2193"
+        />
+        <div class="card__content | flow">
+          <div class="card__content--container | flow">
+            <h2 class="card__title"><%= @products.last.name %></h2>
+            <p class="card__description">
+              <%= @products.last.description.split(". ").first %>
+            </p>
+          </div>
+          <a href=<%= "/products/#{@products.last.id}" %> class="card__button fw-bold text-dark text-decoration-none">Read more</a>
+        </div>
+      </article>
     </div>
   </div>
 </div>
 <%# PRODUCTS %>
+
+<%# CONTACT US %>
+<div class="container">
+  <div class="row d-flex justify-content-between align-items-center">
+    <div class="col-lg-8 p-5" data-aos="fade-right">
+      <div style="width: 100%; height: 600px;"
+          data-controller="map"
+          data-map-markers-value="<%= @markers.to_json %>"
+          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+    <div class="col-lg-4 flex flex-column">
+      <div class="address">
+        <p>Address:</p>
+        <h4>Sekinchan, Selangor</h4>
+        <p>Email:</p>
+        <h4>guavaaa_178@gmail.com</h4>
+      </div>
+      <hr>
+      <div class="contact">
+        <h2 class="text-dark">Contact US</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<%# CONTACT US %>
