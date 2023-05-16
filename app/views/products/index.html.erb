@@ -1,2 +1,7 @@
-<h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
+<%= render "products/product" %>
+
+<section class="py-5">
+  <div class="container bg-dark">
+    <%= render partial: "carts/cart" if @render_cart %>
+  </div>
+</section>
