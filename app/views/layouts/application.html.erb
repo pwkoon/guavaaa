@@ -18,6 +18,7 @@
       AOS.init();
     </script>
     <%= render "shared/flashes" %>
+    <%= render partial: "carts/cart" if @render_cart %>
     <%# <%= render "shared/navbar" unless current_page?(new_user_session_path) || current_page?(new_user_registration_path) || current_page?(root_path)%>
     <%= yield %>
 
