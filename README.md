@@ -1,1 +1,4 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+DEDICATED TO MY DAD'S BUSINESS - PLATFORM OF BUSINESS, FEATURING BUSINESS PROFILE, PRODUCTS CATALOGUE, MAP APIS, ONLINE ORDERING, SIM TO THE PLE.
+
+: RUBY, HTML, CSS, BOOTSTRAP, JS (HOTWIRE)
+
