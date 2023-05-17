@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  get 'cart', to: 'cart#show'
-  post 'cart/add'
-  post 'cart/remove'
+  get 'carts', to: 'carts#show'
+  post 'carts/add_in_product'
+  post 'carts/remove'
+  post 'carts/add_in_cart'
 
   # root to: "pages#home"
   resources :products
