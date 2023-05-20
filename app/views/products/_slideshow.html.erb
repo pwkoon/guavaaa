@@ -1,0 +1,90 @@
+<div class="container vh-100 py-3">
+  <div class="row d-flex justify-content-between">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Products</li>
+    </ol>
+  </div>
+  <div data-controller="slideshow" data-slideshow-index-value="1">
+    <section class="shadow p-3" style="background-color: #AA5656; width: 100%; border-radius:15px;">
+      <div class="text-center">
+        <a class="text-decoration-none text-white fs-3" data-action="slideshow#previous"><i class="fa-solid fa-chevron-left"></i></a>
+        <a class="text-white fs-3" data-action="slideshow#next"><i class="fa-solid fa-chevron-right"></i></a>
+      </div>
+    <%# PRODUCT #1 %>
+    <div data-slideshow-target="slide">
+      <div class="row d-flex align-items-center justify-content-around g-2 py-4">
+        <div class="col-lg-5">
+          <%= cl_image_tag @products.first.photo.key, height: 500, width: 450, crop: :fill, class: "product-show"%>
+          <%= cl_image_tag @products.first.photo.key, height: 400, width: 350, crop: :fill, class: "product-show1 d-lg-flex d-none" %>
+        </div>
+        <div class="col-lg-5 text-white text-center">
+          <h1 class="display-4"><%= @products.first.name %></h1>
+          <hr>
+          <div class="py-3">
+            <h3 class="text-white fw-bold">They are... </h3>
+            <p class="text-white fs-5">
+            <%= @products.first.description %>
+            </p>
+          </div>
+          <div class="py-5">
+            <p class="text-white bg-dark w-50 p-3 mx-auto">Price: <%= humanized_money_with_symbol(@products.first.price) %> /kg</p>
+          </div>
+          <a href="/products" class="card__button opacity-100">Go to cart</a>
+        </div>
+      </div>
+    </div>
+    <%# PRODUCT #1 %>
+
+    <%# PRODCUT #2 %>
+    <div data-slideshow-target="slide">
+      <div class="row d-flex align-items-center justify-content-around g-2 py-4">
+        <div class="col-lg-5">
+          <%= cl_image_tag @products.second.photo.key, height: 500, width: 450, crop: :fill, class: "product-show"%>
+          <%= cl_image_tag @products.second.photo.key, height: 400, width: 350, crop: :fill, class: "product-show1 d-lg-flex d-none" %>
+        </div>
+        <div class="col-lg-5 text-white text-center">
+          <h1 class="display-4"><%= @products.second.name %></h1>
+          <hr>
+          <div class="py-3">
+            <h3 class="text-white fw-bold">They are... </h3>
+            <p class="text-white fs-5">
+            <%= @products.second.description %>
+            </p>
+          </div>
+          <div class="py-5">
+            <p class="text-white bg-dark w-50 p-3 mx-auto">Price: <%= humanized_money_with_symbol(@products.second.price) %> /kg</p>
+          </div>
+          <a href="/products" class="card__button opacity-100">Go to cart</a>
+        </div>
+      </div>
+    </div>
+    <%# PRODCUT #2 %>
+
+    <%# PRODCUT #3 %>
+    <div data-slideshow-target="slide">
+      <div class="row d-flex align-items-center justify-content-around g-2 py-4">
+        <div class="col-lg-5">
+          <%= cl_image_tag @products.last.photo.key, height: 500, width: 450, crop: :fill, class: "product-show"%>
+          <%= cl_image_tag @products.last.photo.key, height: 400, width: 350, crop: :fill, class: "product-show1 d-lg-flex d-none" %>
+        </div>
+        <div class="col-lg-5 text-white text-center">
+          <h1 class="display-4"><%= @products.last.name %></h1>
+          <hr>
+          <div class="py-3">
+            <h3 class="text-white fw-bold">They are... </h3>
+            <p class="text-white fs-5">
+            <%= @products.last.description %>
+            </p>
+          </div>
+          <div class="py-5">
+            <p class="text-white bg-dark w-50 p-3 mx-auto">Price: <%= humanized_money_with_symbol(@products.last.price) %> /kg</p>
+          </div>
+          <a href="/products" class="card__button opacity-100">Go to cart</a>
+        </div>
+      </div>
+    </div>
+    <%# PRODCUT #3 %>
+    </section>
+  </div>
+</div>

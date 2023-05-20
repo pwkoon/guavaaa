@@ -36,7 +36,7 @@
   <div class="welcome-text">
     <h1>Sekinchan's local</h1>
     <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-    <a href="/">Contact US</a>
+    <a href="/users/sign_up">Sign UP</a>
   </div>
 </div>
 <%# HEADER/BANNER/NAVBAR %>
@@ -45,30 +45,44 @@
 <div class="back-top"
      data-controller="backtop"
      data-action="scroll@window->backtop#updateButton">
-  <a href="#" style="color: #DF2E38;"><i class="fa-solid fa-circle-up"></i></a>
+  <a href="#" style="color: #A9907E;"><i class="fa-solid fa-circle-up"></i></a>
 </div>
 <%# BACK TO TOP %>
 
 <%# About %>
 <div class="about" id="about">
-  <div class="container about-section py-5">
-    <div class="row d-flex g-5 justify-content-between align-items-center">
-      <div class="col-lg-6 col-md-12 col-sm-12">
+  <div class="container py-5">
+    <h4 class="fw-bold display-5 text-center py-3" data-aos="fade-up">About</h4>
+    <div class="about-row row d-flex p-2 g-3 justify-content-around align-items-center">
+      <div class="col-lg-6 col-md-12 col-sm-12" data-aos="fade-right">
+        <p class="text-dark text-center about-text">Transitioning from being a construction worker to a fruit and vegetable
+        farmer is tougher than changing careers to coding. After all, it requires a
+        combination of physical and mental prowess.</p>
+      </div>
+      <div class="col-lg-3 col-md-12 col-sm-12 bg-white">
         <div class="about-img shadow-effect" data-aos="fade-up" style="background-image: url('https://images.pexels.com/photos/1459331/pexels-photo-1459331.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
         </div>
       </div>
-      <div class="col-lg-6 col-md-12 col-sm-12 bg-white" data-aos="fade-up">
-        <div class="about-content p-3">
-          <h4>About <span class="fw-bold display-6">Guavaaa</span></h4>
-          <h6 class="text-dark display-7">Transitioning from being a construction worker to a fruit and vegetable farmer is tougher
-          than changing careers to coding. After all, it requires a combination of physical and mental
-          prowess. <strong>However, Mr. Pan, driven by an undying spirit, made the courageous decision to
-          convert his rice fields into a sprawling fruit and vegetable garden. He began by cultivating
-          sour kumquats, and then delved into the realms of guava and corn cultivation.</strong>
-          It's not mere showmanship; numerous reviews have attested to Mr. Pan's exceptional guavas,
-          and his corn harvests never fail to cause a frenzy. If you want to learn more, read on!</h6>
+    </div>
+    <div class="about-row row d-flex p-2 g-3 justify-content-around align-items-center">
+      <div class="col-lg-3 col-md-12 col-sm-12">
+        <div class="about-img shadow-effect" data-aos="fade-up" style="background-image: url('https://images.pexels.com/photos/8668727/pexels-photo-8668727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
         </div>
-        <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 bg-white" data-aos="fade-left">
+        <p class="text-dark text-center about-text">However, Mr. Pan, driven by an undying spirit, made the courageous decision to
+          convert his rice fields into a sprawling fruit and vegetable garden. He began by cultivating
+          sour kumquats, and then delved into the realms of guava and corn cultivation.</p>
+      </div>
+    </div>
+    <div class="about-row row d-flex p-2 g-3 justify-content-around align-items-center">
+      <div class="col-lg-6 col-md-12 col-sm-12" data-aos="fade-right">
+        <p class="text-dark text-center about-text">It's not mere showmanship; numerous reviews have attested to Mr. Pan's exceptional guavas,
+          and his corn harvests never fail to cause a frenzy. If you want to learn more, read on!</p>
+      </div>
+      <div class="col-lg-3 col-md-12 col-sm-12 bg-white">
+        <div class="about-img shadow-effect" data-aos="fade-up" style="background-image: url('https://images.pexels.com/photos/8668726/pexels-photo-8668726.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+        </div>
       </div>
     </div>
   </div>
@@ -76,9 +90,8 @@
 <%# About %>
 
 <%# PRODUCTS %>
-<%= render "shared/modal" %>
 <div class="container-fluid" id="products">
-  <div class="row vw-100 vh-50" style="background-color: #FFF56D;">
+  <div class="row vw-100 vh-50" style="background-color: #F7D060;">
   <h4 class="fw-bold display-5 text-center py-3" data-aos="fade-up">PRODUCTS</h4>
     <div class="col-lg-4 col-md-12 py-5" data-aos="fade-up">
       <article class="card mx-auto flex-center">

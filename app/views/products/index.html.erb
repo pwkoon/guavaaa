@@ -1,24 +1,14 @@
-<%= render partial: "carts/cart" if @render_cart %>
-
-<h1>Products</h1>
-
-<div id="products">
-  <% @products.each do |product| %>
-    <%= render product %>
-  <% end %>
-</div>
-
-
-<hr>
-
-<div class="container mx-auto bg-dark">
-  <div class="p-5 display-5" data-controller="slideshow" data-slideshow-index-value="1">
-    <button data-action="slideshow#previous"> ← </button>
-    <button data-action="slideshow#next"> → </button>
-
-    <div data-slideshow-target="slide">🐵</div>
-    <div data-slideshow-target="slide">🙈</div>
-    <div data-slideshow-target="slide">🙉</div>
-    <div data-slideshow-target="slide">🙊</div>
+<div class="container-fluid">
+  <div id="products" class="p-3 m-3">
+    <div class="row">
+      <div class="col-lg-6" style="background-color:#B46060">
+        <% @products.each do |product| %>
+          <%= render product %>
+        <% end %>
+      </div>
+      <div class="col-lg-6">
+        <%= render partial: "carts/cart" if @render_cart %>
+      </div>
+    </div>
   </div>
 </div>
