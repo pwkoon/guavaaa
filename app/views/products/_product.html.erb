@@ -1,14 +1,12 @@
 <div class="container">
-  <div class="row">
-    <div class="col-lg-10">
+  <div class="row g-3">
+    <div class="col-lg-7 p-3 m-3">
       <div id="<%= dom_id product %>">
         <div>
           <strong>Name:</strong>
-          <%= product.name %>
-          <strong>Description:</strong>
-          <%= product.description %>
+          <%= product.name %><br>
           <strong>Price:</strong>
-          <%= humanized_money_with_symbol(product.price) %>
+          <%= humanized_money_with_symbol(product.price) %><br>
           <%= form_with(url: carts_add_in_product_path) do |f| %>
             <%= f.hidden_field :id, value: product.id %>
             <%= f.number_field :quantity, value: 0, min: 1 %>
