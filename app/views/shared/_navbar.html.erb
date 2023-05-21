@@ -1,54 +1,29 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container">
-   <%= link_to "/", class: "navbar-brand" do %>
-      <%= image_tag(asset_path('guavaa.png'), class:"logo") %>
-    <% end %>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon">
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <% if user_signed_in? %>
-          <li class="nav-item"> <!-- removed "active" due to conflict with slideshow round dots -->
-            <%= link_to "About", "#about", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Products", "#product", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Reviews", "#review", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "FAQ", "#faq", class: "nav-link" %>
-          </li>
-          <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-            </div>
-          </li>
-        <% else %>
-          <li class="nav-item">
-            <%= link_to "About", "#about", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Products", "#product", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Reviews", "#review", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "FAQ", "#faq", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-  </div>
+<%# LOGIN NAVBAR %>
+<div class="container-fluid" style="background-color: #617A55;">
+  <% if user_signed_in? %>
+    <ul class="nav justify-content-end" >
+      <li class="nav-item">
+        <%= link_to 'English', root_path(locale: :en), class: "nav-link text-white" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to '华语', root_path(locale: :"zh-CN"), class: "nav-link text-white" %>
+      </li>
+      <li class="nav-item">
+          <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-link text-white" %>
+      </li>
+    </ul>
+  <% else %>
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <%= link_to 'English', root_path(locale: :en), class: "nav-link text-white" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to '华语', root_path(locale: :"zh-CN"), class: "nav-link text-white" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Login", new_user_session_path, class: "nav-link text-white" %>
+      </li>
+    </ul>
+  <% end %>
 </div>
+<%# LOGIN NAVBAR %>
