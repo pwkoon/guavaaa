@@ -22,11 +22,13 @@
                 <%= f.submit "Cancel" %>
               <% end %>
             </div>
-
-
           </div>
         </div>
-      <% end %>
+    <% end %>
+        <%= form_tag orders_path do %>
+          <%= hidden_field_tag 'cart_id', @cart.id %>
+          <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+        <% end %>
     <p class="text-white fw-bold button-total">Total: <%= @cart.total %></p>
     <a class="text-dark fw-bold button-checkout text-decoration-none">Check out</a>
   <% else %>

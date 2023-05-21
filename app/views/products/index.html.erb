@@ -1,14 +1,66 @@
-<div class="container-fluid">
-  <div id="products" class="p-3 m-3">
-    <div class="row">
-      <div class="col-lg-6" style="background-color:#B46060">
+<div class="container-fluid overall-background">
+  <%# <div class="row d-flex justify-content-between bg-dark py-2">
+    <a href="/#product" class="text-end fs-4" style="color: white;"><i class="fa-regular fa-circle-xmark"></i></a>
+  </div> %>
+  <div class="container">
+    <div class="row d-flex justify-content-between p-3">
+      <ol class="breadcrumb w-10 p-3" style="background: #99A98F;">
+        <li class="breadcrumb-item "><a href="/" class="text-white">Home</a></li>
+        <li class="breadcrumb-item text-white fw-bold active" aria-current="page">Products</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row d-flex jusfify-content-around">
+      <div class="col-lg-6">
         <% @products.each do |product| %>
-          <%= render product %>
+          <div id="container" id="<%= dom_id product %>">
+            <div class="product-details">
+              <h1><%= product.name %></h1><br>
+              <span class="hint-star star">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+              </span>
+                  <p class="information">
+                  <i class="fa-solid fa-quote-left"></i>
+                  <%= ["The best seller with juicy crispy meat!",
+                  "Sweet Corn best for your health!",
+                  "The juicy fruit i had ever!"].sample %>
+                  <i class="fa-solid fa-quote-right"></i>
+                  </p>
+                  <p>
+                    <strong>Price:</strong>
+                    <%= humanized_money_with_symbol(product.price) %> / KG<br>
+                  </p>
+              <div class="control">
+                <%= form_with(url: carts_add_in_product_path) do |f| %>
+                  <%= f.hidden_field :id, value: product.id %>
+                  <%= f.number_field :quantity, value: 0, min: 1 %>
+                  <%= f.submit "Add To Cart" %>
+                <% end %>
+              </div>
+            </div>
+            <div class="product-image">
+              <%= cl_image_tag product.photo.key, height: 500, width: 450, crop: :fill %>
+              <div class="info p-3">
+                <h4> Description</h4>
+                <p><%= product.description %></p>
+              </div>
+            </div>
+          </div>
         <% end %>
       </div>
-      <div class="col-lg-6">
+
+      <div class="col-lg-5 cart-section py-3 mt-5 sticky-top">
         <%= render partial: "carts/cart" if @render_cart %>
       </div>
     </div>
   </div>
 </div>
+
+<%# <a href="/#product" class="text-end fs-4"><i class="fa-solid fa-cart-shopping"></i></a> %>
+<%# <%= render "slideshow" %>
