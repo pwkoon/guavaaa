@@ -18,9 +18,9 @@
   </div>
 
   <div class="welcome-text">
-    <h1>Sekinchan's local</h1>
-    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-    <a href="/users/sign_up">Sign UP</a>
+    <h1><%= t '.header' %></h1>
+    <p class="text-white"><%= t '.slogan' %></p>
+    <a href="/users/sign_up"><%= t '.register' %></a>
   </div>
 </div>
 <%# HEADER/BANNER/NAVBAR %>
@@ -36,12 +36,10 @@
 <%# About %>
 <div class="about" id="about">
   <div class="container py-5">
-    <h4 class="fw-bold display-5 text-center py-3" data-aos="fade-up">About</h4>
+    <h4 class="fw-bold display-5 text-center py-3" data-aos="fade-up"><%= t '.about-content' %></h4>
     <div class="about-row row d-flex p-2 g-3 justify-content-around align-items-center">
       <div class="col-lg-6 col-md-12 col-sm-12" data-aos="fade-right">
-        <p class="text-dark text-center about-text">Transitioning from being a construction worker to a fruit and vegetable
-        farmer is tougher than changing careers to coding. After all, it requires a
-        combination of physical and mental prowess.</p>
+        <p class="text-dark text-center about-text"><%= t '.about-content-first' %></p>
       </div>
       <div class="col-lg-3 col-md-12 col-sm-12 bg-white">
         <div class="about-img shadow-effect" data-aos="fade-up" style="background-image: url('https://images.pexels.com/photos/1459331/pexels-photo-1459331.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
@@ -54,15 +52,12 @@
         </div>
       </div>
       <div class="col-lg-6 col-md-12 col-sm-12 bg-white" data-aos="fade-left">
-        <p class="text-dark text-center about-text">However, Mr. Pan, driven by an undying spirit, made the courageous decision to
-          convert his rice fields into a sprawling fruit and vegetable garden. He began by cultivating
-          sour kumquats, and then delved into the realms of guava and corn cultivation.</p>
+        <p class="text-dark text-center about-text"><%= t '.about-content-second' %></p>
       </div>
     </div>
     <div class="about-row row d-flex p-2 g-3 justify-content-around align-items-center">
       <div class="col-lg-6 col-md-12 col-sm-12" data-aos="fade-right">
-        <p class="text-dark text-center about-text">It's not mere showmanship; numerous reviews have attested to Mr. Pan's exceptional guavas,
-          and his corn harvests never fail to cause a frenzy. If you want to learn more, read on!</p>
+        <p class="text-dark text-center about-text"><%= t '.about-content-third' %></p>
       </div>
       <div class="col-lg-3 col-md-12 col-sm-12 bg-white">
         <div class="about-img shadow-effect" data-aos="fade-up" style="background-image: url('https://images.pexels.com/photos/8668726/pexels-photo-8668726.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
@@ -76,7 +71,7 @@
 <%# PRODUCTS %>
 <div class="container-fluid" id="products">
   <div class="row vw-100 vh-50" style="background-color: #F7D060;">
-  <h4 class="fw-bold display-5 text-center py-3" data-aos="fade-up">PRODUCTS</h4>
+  <h4 class="fw-bold display-5 text-center py-3" data-aos="fade-up"><%= t '.about-content' %></h4>
     <div class="col-lg-4 col-md-12 py-5" data-aos="fade-up">
       <article class="card mx-auto flex-center">
         <img
@@ -88,12 +83,12 @@
         />
         <div class="card__content | flow">
           <div class="card__content--container | flow">
-            <h2 class="card__title"><%= @products.first.name %></h2>
+            <h2 class="card__title"><%= t '.product1' %></h2>
             <p class="card__description">
-              <%= @products.first.description.split(". ").first %>
+              <%= t '.product1-description' %>
             </p>
           </div>
-          <a href=<%= "/products" %> class="card__button fw-bold text-dark text-decoration-none">Read more</a>
+          <a href=<%= "/products" %> class="card__button fw-bold text-dark text-decoration-none"><%= t '.readmore' %></a>
         </div>
       </article>
     </div>
@@ -109,12 +104,12 @@
         />
         <div class="card__content | flow">
           <div class="card__content--container | flow">
-            <h2 class="card__title"><%= @products.second.name %></h2>
+            <h2 class="card__title"><%= t '.product2' %></h2>
             <p class="card__description">
-              <%= @products.second.description.split(". ").first %>
+              <%= t '.product2-description' %>
             </p>
           </div>
-           <a href=<%= "/products" %> class="card__button fw-bold text-dark text-decoration-none">Read more</a>
+           <a href=<%= "/products" %> class="card__button fw-bold text-dark text-decoration-none"><%= t '.readmore' %></a>
         </div>
       </article>
     </div>
@@ -130,12 +125,12 @@
         />
         <div class="card__content | flow">
           <div class="card__content--container | flow">
-            <h2 class="card__title"><%= @products.last.name %></h2>
+            <h2 class="card__title"><%= t '.product3' %></h2>
             <p class="card__description">
-              <%= @products.last.description.split(". ").first %>
+              <%= t '.product3-description' %>
             </p>
           </div>
-          <a href=<%= "/products" %> class="card__button fw-bold text-dark text-decoration-none">Read more</a>
+          <a href=<%= "/products" %> class="card__button fw-bold text-dark text-decoration-none"><%= t '.readmore' %></a>
         </div>
       </article>
     </div>
@@ -162,7 +157,7 @@
       <hr>
       <div class="contact p-1">
         <div class="bg-white m-3">
-          <h1 class="text-center">Contact US</h1>
+          <h1 class="text-center"><%= t '.contact' %></h1>
           <%= render "contacts/form" %>
         </div>
       </div>

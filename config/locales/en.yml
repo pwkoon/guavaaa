@@ -37,3 +37,24 @@ en:
       products: "Products"
       FAQ: "FAQ"
       contacts: "Contacts"
+      header: "Sekinchan's local"
+      slogan: "Life without natural products is tasteless"
+      register: "Sign UP"
+      about-content: "About"
+      about-content-first: "Transitioning from being a construction worker to a fruit and vegetable
+                            farmer is tougher than changing careers to coding. After all, it requires a
+                            combination of physical and mental prowess."
+      about-content-second: "However, Mr. Pan, driven by an undying spirit, made the courageous decision to
+                            convert his rice fields into a sprawling fruit and vegetable garden. He began by cultivating
+                            sour kumquats, and then delved into the realms of guava and corn cultivation."
+      about-content-third: "It's not mere showmanship; numerous reviews have attested to Mr. Pan's exceptional guavas,
+                            and his corn harvests never fail to cause a frenzy."
+      products-home: "Products"
+      product1: "Guava A"
+      product1-description: "Guava trees are native to tropical America but we different"
+      readmore: "Read More"
+      product2: "Guava B"
+      product2-description: "Looking not so good but taste same as Guava A"
+      product3: "Sekinchan Corn"
+      product3-description: "Sweet corn is the result of a naturally occurring recessive mutation in the genes"
+      contact: "Contact US"
