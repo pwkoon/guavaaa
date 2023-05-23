@@ -18,6 +18,7 @@
   z-index: 100;
 }
 
+
 .back-top.active {
   bottom: 32px;
   pointer-events: auto;
@@ -71,5 +72,22 @@
   }
   100% {
     background-position: 0 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .back-top {
+
+  }
+}
+@media only screen and (min-width: 600px) {
+  .back-top {
+
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .back-top {
+
   }
 }
