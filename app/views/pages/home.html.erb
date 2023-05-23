@@ -23,19 +23,19 @@
     <a href="/users/sign_up"><%= t '.register' %></a>
   </div>
 </div>
-<%# HEADER/BANNER/NAVBAR %>
 
 <%# BACK TO TOP %>
 <div class="back-top"
      data-controller="backtop"
      data-action="scroll@window->backtop#updateButton">
-  <a href="#" style="color: #A9907E;"><i class="fa-solid fa-circle-up"></i></a>
+  <a href="#" style="color: #A9907E;"><i class="fa-solid fa-circle-up button-top"></i></a>
 </div>
 <%# BACK TO TOP %>
+<%# HEADER/BANNER/NAVBAR %>
 
 <%# About %>
 <div class="about" id="about">
-  <div class="container py-5">
+  <div class="container-fluid py-5">
     <h4 class="fw-bold display-5 text-center py-3" data-aos="fade-up"><%= t '.about-content' %></h4>
     <div class="about-row row d-flex p-2 g-3 justify-content-around align-items-center">
       <div class="col-lg-6 col-md-12 col-sm-12" data-aos="fade-right">
