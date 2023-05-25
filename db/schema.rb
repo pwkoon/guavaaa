@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_23_100923) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_25_143940) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,12 +42,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_23_100923) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "carts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "price_cents", default: 0, null: false
-  end
-
   create_table "contacts", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -57,26 +51,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_23_100923) do
     t.string "question"
   end
 
-  create_table "orderables", force: :cascade do |t|
-    t.bigint "product_id", null: false
-    t.bigint "cart_id", null: false
-    t.integer "quality"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "quantity"
-    t.index ["cart_id"], name: "index_orderables_on_cart_id"
-    t.index ["product_id"], name: "index_orderables_on_product_id"
-  end
-
   create_table "orders", force: :cascade do |t|
     t.string "state"
-    t.integer "amount_cents", default: 0, null: false
+    t.string "product_sku"
     t.string "checkout_session_id"
     t.bigint "user_id", null: false
-    t.bigint "cart_id", null: false
+    t.bigint "product_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["cart_id"], name: "index_orders_on_cart_id"
+    t.integer "amount_cents", default: 0, null: false
+    t.index ["product_id"], name: "index_orders_on_product_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
@@ -95,6 +79,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_23_100923) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "price_cents", default: 0, null: false
+    t.string "sku"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -123,9 +108,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_23_100923) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "orderables", "carts"
-  add_foreign_key "orderables", "products"
-  add_foreign_key "orders", "carts"
+  add_foreign_key "orders", "products"
   add_foreign_key "orders", "users"
   add_foreign_key "reviews", "users"
 end
