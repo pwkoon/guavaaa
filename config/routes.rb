@@ -4,11 +4,6 @@ Rails.application.routes.draw do
     devise_for :users
     root to: "pages#home"
 
-    get 'carts', to: 'carts#show'
-    post 'carts/add_in_product'
-    post 'carts/add_in_cart'
-    post 'carts/remove'
-
     resources :products
     # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

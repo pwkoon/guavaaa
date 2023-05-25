@@ -57,6 +57,13 @@
   animation: animate 15s ease infinite;
 }
 
+.overall-background {
+  background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('https://images.pexels.com/photos/1595108/pexels-photo-1595108.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+
 @keyframes animate {
   0% {
     background-position: 0 0;
