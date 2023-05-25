@@ -4,4 +4,5 @@ class Product < ApplicationRecord
   monetize :price_cents
   has_many :orderables, dependent: :destroy
   has_many :carts, through: :orderables
+
 end

@@ -25,12 +25,12 @@
           </div>
         </div>
     <% end %>
-        <%= form_tag orders_path do %>
-          <%= hidden_field_tag 'cart_id', @cart.id %>
-          <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
-        <% end %>
+     <%= form_tag orders_path do %>
+      <%= hidden_field_tag 'cart_id', @cart.id %>
+      <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+    <% end %>
+    <p><strong>**Noted on this is self pick-up service!**</strong></p>
     <p class="text-white fw-bold button-total">Total: <%= @cart.total %></p>
-    <a class="text-dark fw-bold button-checkout text-decoration-none">Check out</a>
   <% else %>
     <p class="text-dark text-center mt-5">Your cart is empty. <i class="fa-regular fa-face-surprise"></i></p>
   <% end %>
