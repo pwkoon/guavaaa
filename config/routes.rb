@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
-    root to: "pages#home"
+    mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
     devise_for :users
+    root to: "pages#home"
 
     get 'carts', to: 'carts#show'
     post 'carts/add_in_product'
