@@ -1,5 +1,3 @@
-require "stripe"
-
 Rails.configuration.stripe = {
   publishable_key: ENV['STRIPE_PUBLISHABLE_KEY'],
   secret_key:      ENV['STRIPE_SECRET_KEY'],
@@ -11,5 +9,5 @@ Stripe.api_key = Rails.configuration.stripe[:secret_key]
 StripeEvent.signing_secret = Rails.configuration.stripe[:signing_secret]
 
 StripeEvent.configure do |events|
-  events.subscribe 'checkout.session.completed', StripeCheckService.new
+  events.subscribe 'checkout.session.completed', StripeCheckoutSessionService.new
 end
