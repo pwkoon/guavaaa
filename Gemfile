@@ -40,8 +40,6 @@ gem 'stripe'
 
 gem 'stripe_event'
 
-gem "rails_admin", "3.0"
-
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
