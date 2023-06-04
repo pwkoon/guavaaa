@@ -2,8 +2,9 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="slideshow"
 export default class extends Controller {
-  static targets = ["slide"]
+  static targets = ["slide", "transition"]
   static values = { index: Number, reviews: Number}
+
 
   connect() {
     // console.log(this.reviewsValue)
