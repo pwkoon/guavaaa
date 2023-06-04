@@ -16,10 +16,9 @@ Product.destroy_all
 puts "Creating users"
 
 user = User.create!(
-  first_name: "Ben Lai",
-  last_name: "Puah",
+  username: "Ben Lai",
   email: "benlai@gmail.com",
-  password:"testing"
+  password: "testing"
 )
 
 puts "Creating products"
