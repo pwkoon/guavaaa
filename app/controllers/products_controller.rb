@@ -3,6 +3,8 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    @review = Review.new
+    @reviews = Review.all
   end
 
   def show
@@ -18,9 +20,9 @@ class ProductsController < ApplicationController
     @product = Product.new(params_product)
 
     if @product.save
-        redirect_to  product_path(@product)
+      redirect_to  product_path(@product)
     else
-        render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 
