@@ -1,15 +1,20 @@
-<div class="container">
-  <div class="row py-4">
-    <div class="col-md-3"><%= cl_image_tag @order.product.photo.key, width: '100%' %></div>
-    <div class="col">
-      <h1>Order #<%= @order.id %> <small><span class="badge badge-primary"><%= @order.state %></span></small></h1>
-      <ul class="list-unstyled">
-        <li><strong>ISSUED ON</strong> <%= @order.created_at.to_date %></li>
-        <li><strong>Product</strong> <%= @order.product.name %> [<%= @order.product_sku %>]</li>
-        <li><strong>TOTAL</strong> <%= humanized_money_with_symbol @order.amount %></li>
-        </li>
-      </ul>
-      <p>Estimated delivery in <strong>2 business days</strong></p>
+
+<div class="container-fluid order-container vh-100">
+
+  <div class="row justify-content-around">
+    <div class="col-lg-6 order-box p-3">
+      <div class=""><%= cl_image_tag @order.product.photo.key, width: 400, height: 300, crop: :fill %></div>
+      <div class="m-3 p-3" style="background-color:#FFD95A;">
+        <h1>Order #<%= @order.id %> <small><span class="badge badge-primary"><%= @order.state %></span></small></h1>
+        <ul class="list-unstyled">
+          <li><strong>ISSUED ON</strong> <%= @order.created_at.to_date %></li>
+          <li><strong>Product</strong> <%= @order.product.name %> [<%= @order.product_sku %>]</li>
+          <li><strong>TOTAL</strong> <%= humanized_money_with_symbol @order.amount %></li>
+          </li>
+        </ul>
+        <p>Estimated delivery in <strong>2 business days</strong></p>
+      </div>
     </div>
   </div>
+
 </div>

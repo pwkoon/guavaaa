@@ -13,6 +13,6 @@ Rails.application.routes.draw do
       resources :payments, only: :new
     end
     resources :contacts, only: [:new, :create]
-    resources :reviews, only: [:index, :create]
+    resources :reviews, only: [:index, :new, :create]
   end
 end

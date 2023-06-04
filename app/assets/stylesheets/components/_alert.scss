@@ -61,7 +61,30 @@
   background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('https://images.pexels.com/photos/1595108/pexels-photo-1595108.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   background-position: center;
   background-size: cover;
-  height: 100%;
+}
+
+.payment-box {
+  border: 3px solid #D7C0AE;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.payment-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('https://images.pexels.com/photos/5782205/pexels-photo-5782205.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-position: center;
+  background-size: cover;
+}
+
+.order-box {
+  border: 3px solid #FFD95A;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.order-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('https://images.pexels.com/photos/1412550/pexels-photo-1412550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-position: center;
+  background-size: cover;
 }
 
 @keyframes animate {

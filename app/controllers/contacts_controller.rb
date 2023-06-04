@@ -9,9 +9,9 @@ class ContactsController < ApplicationController
     @contact = Contact.new(params_contact)
 
     if @contact.save
-        redirect_to  contacts_path(@contact)
+      redirect_to  contacts_path(@contact)
     else
-        render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 

@@ -1,0 +1,24 @@
+<div class="container p-3">
+  <% if user_signed_in? %>
+    <div class="text-center text-align-justify p-3">
+      <h6 style="line-height: 30px;"><span style="letter-spacing:6px;">Hello, you're now signed in as <mark><%= current_user.email %></mark></span><br>
+      <span style="letter-spacing:5px;">Thanks for your time to provide your reviews on us!</span><br>
+      <span style="letter-spacing:4px;">We see, we listen, and we welcome your kindness words <i class="fa-solid fa-heart"></i></span>
+      </h6>
+    </div>
+    <div class="p-1 m-4 text-center w-50 mx-auto">
+      <%= simple_form_for @review do |f| %>
+        <%= f.input :content, placeholder: '' %>
+        <%= f.input :photo, as: :file %>
+        <%= f.button :submit , "Submit"%>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="bg-white text-center">
+      <h6>Sign in to leave your precious review.<br>
+        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
+      </h6>
+    </div>
+  <% end %>
+</div>
