@@ -73,7 +73,7 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-self: flex-end;
-  height: 55%;
+  height: 65%;
   padding: 12% 1.25rem 1.875rem;
   background: linear-gradient(
     180deg,
@@ -188,50 +188,12 @@ p {
 }
 
 // MEDIA QUERIES
-// @media screen and (max-width: 600px) {
-//   .card {
-//     max-width: 57.875rem;
-//   }
+@media screen and (max-width: 600px) {
+  .card {
+    right: 6%;
+  }
+}
 
-//   .card__content {
-//     height: 55%;
-//     width: 100%;
-//   }
-
-//   .card-button {
-//     margin-bottom: 10%;
-//   }
-// }
-
-// @media screen and (min-width: 768px) {
-//   .card {
-//     max-width: 57.875rem;
-//   }
-
-//   .card__content {
-//     height: 55%;
-//     width: 100%;
-//   }
-
-//   .card-button {
-//     margin-bottom: 10%;
-//   }
-// }
-
-// @media screen and (min-width: 768px) {
-//   .card {
-//     max-width: 57.875rem;
-//   }
-
-//   .card__content {
-//     height: 55%;
-//     width: 100%;
-//   }
-
-//   .card-button {
-//     margin-bottom: 10%;
-//   }
-// }
 
 // @media screen and (min-width: 1200px) {
 //   .card {
